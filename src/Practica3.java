@@ -7,7 +7,13 @@ public class Practica3 {
         //Iniciamos el Scanner
 
         Scanner sc = new Scanner(System.in);
+
+
         System.out.println("Elija el tipo de ejercicio a resolver:");
+        System.out.println("if ");
+        System.out.println("switch ");
+
+        // Entramos la seleccion y con el switch elegimos donde ir.
         String a = sc.nextLine();
         switch(a){
             case "if":
@@ -25,17 +31,24 @@ public class Practica3 {
     }
 
 }
+// Una clase para los ejercicios
 
 class Ejercicios{
+
+    //Selector de los ejercicios If
+
     static void ejercicioif(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Elija el ejercicio a resolver:");
-        System.out.println("1. ");
-        System.out.println("2. ");
-        System.out.println("5. ");
-        System.out.println("6. ");
-        System.out.println("7. ");
+        System.out.println("1. Par impar");
+        System.out.println("2. Sueldo");
+        System.out.println("5. Triangulo");
+        System.out.println("6. Fiesta Marmotas");
+        System.out.println("7. Notas");
         int a = sc.nextInt();
+
+        // En cada caso llamamos a uno de los ejercicios
+
         switch(a){
             case 1:
                 Ejercicios.ejercicio1();
@@ -61,13 +74,16 @@ class Ejercicios{
         }
 
     }
+
+    //Selector de los ejercicios Switch
+
     static void ejerciciofor(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Elija el ejercicio a resolver:");
-        System.out.println("2. ");
-        System.out.println("3. ");
-        System.out.println("4. ");
-        System.out.println("5. ");
+        System.out.println("2. Lenguajes");
+        System.out.println("3. Numeros");
+        System.out.println("4. Casas Harry Potter");
+        System.out.println("5. Movimiento");
         int a = sc.nextInt();
         switch(a){
             case 2:
@@ -90,6 +106,8 @@ class Ejercicios{
                 }
         }
     }
+
+    // Aqui empiezan los ejercicios
     static void ejercicio1(){
         System.out.println("Ejercicio 1: ");
         Scanner sc = new Scanner(System.in);
