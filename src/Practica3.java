@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Practica3 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //Iniciamos el Scanner
 
         Scanner sc = new Scanner(System.in);
@@ -11,61 +11,75 @@ public class Practica3 {
         String a = sc.nextLine();
         switch(a){
             case "if":
-                    Ejercicios.ejercicio1();
-            case "If":
-
-
+                    Ejercicios.ejercicioif();
+                    break;
+            case "for":
+                    break;
+            default:
+                throw new IllegalStateException("Operacioin incorrecta");
 
 
         }
 
-        }
-        System.out.println("Introduce un numero:");// Pedimos al usuario que introduzca un numero
-        String a = sc.nextLine();
-        System.out.println("Introduce otro numero:");
-        int b = sc.nextInt();
-
-
-        // Comprobamos que los numeros son positivos
-
-        if ((a < 0)||(b<0)) {
-
-            System.out.println("Uno de los numeros es negativo");
-
-        }else{
-
-            System.out.println("Introduce la operacion:");
-            String sim = sc.next();
-
-            // Comprobamos la operacion
-            switch (sim) {
-                case "*":
-                    System.out.println( "El resultado es: " + (a * b));
-                    break;
-                case "/": //Aqui nos puede dar un error si b es 0
-                    if (b == 0){
-                        System.out.println("No puedes dividir por 0");
-                    }else{
-                        System.out.println("El resultado es: " + (a / b));
-                    }
-                    break;
-                case "+":
-                    System.out.println("El resultado es: " + (a + b));
-                    break;
-                case "-":
-                    System.out.println("El resultado es: " + (a - b));
-                    break;
-                default:
-                    //Lanzamos un error de que esa operacion no existe
-                    throw new IllegalStateException("Operacioin incorrecta");
-            }
-        }
     }
+
+}
+
 class Ejercicios{
+    static void ejercicioif(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Elija el ejercicio a resolver:");
+        int a = sc.nextInt();
+        switch(a){
+            case 1:
+                Ejercicios.ejercicio1();
+                break;
+            case 2:
+                Ejercicios.ejercicio1();
+                break;
+            case 5:
+                Ejercicios.ejercicio1();
+                break;
+            case 6:
+                Ejercicios.ejercicio1();
+                break;
+            case 7:
+                Ejercicios.ejercicio1();
+                break;
+            default:
+                try {
+                    throw new Exception("Ejercicio inexistente");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+        }
+
+    }
+    static void ejerciciofor(){
+
+    }
     static void ejercicio1(){
+        System.out.println("Ejercicio 1: ");
 
     }
     static void ejercicio2(){
+        System.out.println("Ejercicio 2: ");
+
+    }
+    static void ejercicio5(){
+        System.out.println("Ejercicio 5: ");
+
+    }
+    static void ejercicio6(){
+        System.out.println("Ejercicio 1: ");
+
+    }
+    static void ejercicio7(){
+        System.out.println("Ejercicio 1: ");
+
+    }
+    static void ejerciciof2(){
+        System.out.println("Ejercicio 1: ");
 
     }
 }
